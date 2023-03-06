@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="Path" x:Key="connectorLineStyle">
+        <Setter Property="Stroke" Value="#6BA5D7"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style TargetType="Path" x:Key="DecoratorSuccessStyle">
+        <Setter Property="Stroke" Value="#66CD00"/>
+        <Setter Property="Fill" Value="#66CD00"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="StrokeStartLineCap" Value="Round"/>
+        <Setter Property="StrokeEndLineCap" Value="Round"/>
+        <Setter Property="StrokeDashCap" Value="Round"/>
+    </Style>
+
+    <Style TargetType="Path" x:Key="DecoratorFailStyle">
+        <Setter Property="Stroke" Value="#b20000"/>
+        <Setter Property="Fill" Value="#b20000"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Stretch" Value="Fill"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="StrokeStartLineCap" Value="Round"/>
+        <Setter Property="StrokeEndLineCap" Value="Round"/>
+        <Setter Property="StrokeDashCap" Value="Round"/>
+    </Style>
+
+    <Style TargetType="Path" x:Key="CustomConnectorStyle">
+        <Setter Property="Stroke" Value="LightSlateGray"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+        <Setter Property="StrokeDashArray" Value="2"/>
+        <Setter Property="Opacity" Value="0.8"/>
+    </Style>
+
+    <Style TargetType="Path" x:Key="DefaultConnectorStyle">
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+    </Style>
+
+    <!--<Style TargetType="Path" x:Key="DefaultConnectorStyle">
+        <Setter Property="Stroke" Value="GreenYellow"/>
+        <Setter Property="StrokeThickness" Value="6"/>
+    </Style>-->
+
+    <Style TargetType="Path" x:Key="ActiveConnectorStyle">
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <!--<Style TargetType="Path" x:Key="ActiveConnectorStyle">
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+    </Style>-->
+
+    <Style TargetType="Path" x:Key="InactiveConnectorStyle">
+        <Setter Property="Stroke" Value="LightSlateGray"/>
+        <Setter Property="StrokeThickness" Value="3"/>
+        <Setter Property="StrokeDashArray" Value="2"/>
+        <Setter Property="Opacity" Value="0.8"/>
+    </Style>
+
+
+</ResourceDictionary>

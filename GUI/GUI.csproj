@@ -1,0 +1,1498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AE421A3-07A1-4751-B9C4-61833CD128EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.BulletGraph.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Diagram.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Diagram.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.DocIO.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Gauge.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Grouping.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grouping.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Maps.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.PdfViewer.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Presentation.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.ProjIO.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfDataGridConverter.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfSmithChart.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.XlsIO.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bus\Bus_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bus\Bus_Main.Designer.cs">
+      <DependentUpon>Bus_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculation\Transformer_pu\Convert_transformer_pu.cs" />
+    <Compile Include="contextMenu\ChangeNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contextMenu\ChangeNameForm.Designer.cs">
+      <DependentUpon>ChangeNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ModelExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ModelExplorer.Designer.cs">
+      <DependentUpon>ModelExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnumUtil.cs" />
+    <Compile Include="FileController\FileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileController\FileBrowser.Designer.cs">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileController\FileType.cs" />
+    <Compile Include="FileController\Matlab\MatlabLoader.cs" />
+    <Compile Include="FileController\open File Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileController\open File Dialog.Designer.cs">
+      <DependentUpon>open File Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileController\PSSE\PSSETransformersWrapper.cs" />
+    <Compile Include="FileController\PSSE\PSSEConfiguration.cs" />
+    <Compile Include="Generator\WindGenerator_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\WindGenerator_Main.Designer.cs">
+      <DependentUpon>WindGenerator_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\PV_Main .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\PV_Main .Designer.cs">
+      <DependentUpon>PV_Main .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\SyncGen_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\SyncGen_main.Designer.cs">
+      <DependentUpon>SyncGen_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geo_Zone\Creat_select_GeoZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geo_Zone\Creat_select_GeoZone.Designer.cs">
+      <DependentUpon>Creat_select_GeoZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geo_Zone\Calculation_Earth_Model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geo_Zone\Calculation_Earth_Model.Designer.cs">
+      <DependentUpon>Calculation_Earth_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geo_Zone\Geo_Zone_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geo_Zone\Geo_Zone_menu.Designer.cs">
+      <DependentUpon>Geo_Zone_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GMDPageView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUIUtils\ColorForm.cs" />
+    <Compile Include="isNetworkOptOWNUZZ.cs" />
+    <Compile Include="Line\Condcutor Data\Cable_Standard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Line\Condcutor Data\Cable_Standard.Designer.cs">
+      <DependentUpon>Cable_Standard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Condcutor Data\TransmissionLine_CondcutorData.cs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Line\Condcutor Data\TransmissionLine_CondcutorData.cs.Designer.cs">
+      <DependentUpon>TransmissionLine_CondcutorData.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Condcutor Data\TransmissionLine_Standard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Line\Condcutor Data\TransmissionLine_Standard.Designer.cs">
+      <DependentUpon>TransmissionLine_Standard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\LineModelTypeSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line\LineModelTypeSelection.Designer.cs">
+      <DependentUpon>LineModelTypeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Line_type\ConductorDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line\Line_type\ConductorDataForm.Designer.cs">
+      <DependentUpon>ConductorDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Line_type\Mphase_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line\Line_type\Mphase_main.Designer.cs">
+      <DependentUpon>Mphase_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Line_type\Doublecircuit_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line\Line_type\Doublecircuit_main.Designer.cs">
+      <DependentUpon>Doublecircuit_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_concept_WPF\Shapes\IDiagramShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\CustomC3WShape.cs" />
+    <Compile Include="Old Menu\old Line\Line_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old Menu\old Line\Line_main.Designer.cs">
+      <DependentUpon>Line_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Line_type\Single3PhaseLine_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line\Line_type\Single3PhaseLine_main.Designer.cs">
+      <DependentUpon>Single3PhaseLine_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line\Validation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load\EV_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load\EV_Main.Designer.cs">
+      <DependentUpon>EV_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load\Load_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load\Load_Main.Designer.cs">
+      <DependentUpon>Load_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generator\Generator_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generator\Generator_Main.Designer.cs">
+      <DependentUpon>Generator_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="MainMenu.designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Menu.Designer.cs">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_concept\RegisterCaseShapes.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomConnectors\CoreBus.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomConnectors\CoreConnector.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomContentControl.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomDiagram\CustomDiagram.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomPort\CustomPort.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomTreeView\Model\TreeNodeWPF.cs" />
+    <Compile Include="New_concept_WPF\Custom_Controls\CustomTreeView\ViewModel\TreeManager.cs" />
+    <Compile Include="New_concept_WPF\DiagramControl.xaml.cs">
+      <DependentUpon>DiagramControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="New_concept_WPF\Shapes\ExBus\BusShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Generator_Shape\PVGenShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Generator_Shape\WindGenShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Generator_Shape\GenShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Generator_Shape\SyncGenShape.cs" />
+    <Compile Include="Old Menu\old Line\AbstractLineShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Line_shape\DoubleCircuitShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Line_shape\LineShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Line_shape\MphaseShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Line_shape\Singleline3phaseShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Load_shape\EVShapecs.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Load_shape\LoadShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\AbstractRLCCShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\CShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\LCShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\LShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\RLCShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\RLShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\RLC_shape\RShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\AbstractTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\C2WTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\CustomTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\C3WTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\TriTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\YgDTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\YgDDTShape.cs" />
+    <Compile Include="New_concept_WPF\Shapes\Transformer_shape\YgYgDTShape.cs" />
+    <Compile Include="New_concept_WPF\Utility\Utils.cs" />
+    <Compile Include="New_concept_WPF\Utility\Command.cs" />
+    <Compile Include="PF_Results\PF_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PF_Results\PF_result.Designer.cs">
+      <DependentUpon>PF_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Polt Forms\Geo_ZonePlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Polt Forms\Geo_ZonePlot.Designer.cs">
+      <DependentUpon>Geo_ZonePlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rlc\RLC_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rlc\RLC_Main.Designer.cs">
+      <DependentUpon>RLC_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Run_PF\RUN_PF_Option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Run_PF\RUN_PF_Option.Designer.cs">
+      <DependentUpon>RUN_PF_Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Save And Cancel Form\Save_Cancel_for_loadData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save And Cancel Form\Save_Cancel_for_loadData.Designer.cs">
+      <DependentUpon>Save_Cancel_for_loadData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search\ChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search\ChangeForm.Designer.cs">
+      <DependentUpon>ChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGridViewDataColumn.cs" />
+    <Compile Include="Stability\Genetrator\GeneratorModelMachine\GenROU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorModelMachine\GenROU.Designer.cs">
+      <DependentUpon>GenROU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorModelMachine\GenSAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorModelMachine\GenSAL.Designer.cs">
+      <DependentUpon>GenSAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\StabilityGeneratorEnum.cs" />
+    <Compile Include="Stability\Genetrator\GeneratorExciters\Ac1c.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorExciters\Ac1c.Designer.cs">
+      <DependentUpon>Ac1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorExciters\Esac1a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorExciters\Esac1a.Designer.cs">
+      <DependentUpon>Esac1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Bbgov1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Bbgov1.Designer.cs">
+      <DependentUpon>Bbgov1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Degov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Degov.Designer.cs">
+      <DependentUpon>Degov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Gastd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorGovernors\Gastd.Designer.cs">
+      <DependentUpon>Gastd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorStabilizers\Iee2st.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorStabilizers\Iee2st.Designer.cs">
+      <DependentUpon>Iee2st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorStabilizers\Psssh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\Genetrator\GeneratorStabilizers\Psssh.Designer.cs">
+      <DependentUpon>Psssh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\ModelTypeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability\ModelTypeMenu.Designer.cs">
+      <DependentUpon>ModelTypeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\StabilityCreator.cs" />
+    <Compile Include="Stability\StabilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Substation\SubstationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Substation\SubstationForm.Designer.cs">
+      <DependentUpon>SubstationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Substation\SubstationList_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Substation\SubstationList_Form.Designer.cs">
+      <DependentUpon>SubstationList_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TLine_Menu\CustomControl\DataLayout\DataLayout.cs" />
+    <Compile Include="TLine_Menu\TLine_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TLine_Menu\TLine_Menu.Designer.cs">
+      <DependentUpon>TLine_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\ComboBoxTools.cs" />
+    <Compile Include="Transformer\ImageAndText.cs" />
+    <Compile Include="Transformer\LoadTAPChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\LoadTAPChanger.Designer.cs">
+      <DependentUpon>LoadTAPChanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\LTC_TapDependentImpedance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\LTC_TapDependentImpedance.Designer.cs">
+      <DependentUpon>LTC_TapDependentImpedance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\Main3WTransformerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\Main3WTransformerMenu.Designer.cs">
+      <DependentUpon>Main3WTransformerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelNoLoadTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelNoLoadTest.Designer.cs">
+      <DependentUpon>gradientPanelNoLoadTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelZeroSeqCharacteristic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelZeroSeqCharacteristic.Designer.cs">
+      <DependentUpon>gradientPanelZeroSeqCharacteristic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelZeroSeqImpedance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TestData\gradientPanelZeroSeqImpedance.Designer.cs">
+      <DependentUpon>gradientPanelZeroSeqImpedance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TestData\QGIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TestData\QGIC.Designer.cs">
+      <DependentUpon>QGIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TransformersComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transformer\TransformersItem.cs" />
+    <Compile Include="Transformer\TwoWinding\LTC_TapDependentImpedance2W.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TwoWinding\LTC_TapDependentImpedance2W.Designer.cs">
+      <DependentUpon>LTC_TapDependentImpedance2W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer\TwoWinding\Main2WTransformerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transformer\TwoWinding\Main2WTransformerMenu.Designer.cs">
+      <DependentUpon>Main2WTransformerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeCreator.cs" />
+    <Compile Include="WireMain\Wire_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WireMain\Wire_Main.Designer.cs">
+      <DependentUpon>Wire_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wrapperUI\BusWrapper.cs" />
+    <Compile Include="Geo_Zone\Geo_Zone_Form_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geo_Zone\Geo_Zone_Form_Create.Designer.cs">
+      <DependentUpon>Geo_Zone_Form_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Geo_Zone\Geo_Zone_Form_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geo_Zone\Geo_Zone_Form_List.Designer.cs">
+      <DependentUpon>Geo_Zone_Form_List.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bus\Bus_Main.resx">
+      <DependentUpon>Bus_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contextMenu\ChangeNameForm.resx">
+      <DependentUpon>ChangeNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAccess\ModelExplorer.resx">
+      <DependentUpon>ModelExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileController\FileBrowser.resx">
+      <DependentUpon>FileBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileController\open File Dialog.resx">
+      <DependentUpon>open File Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\WindGenerator_Main.resx">
+      <DependentUpon>WindGenerator_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\PV_Main .resx">
+      <DependentUpon>PV_Main .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\SyncGen_main.resx">
+      <DependentUpon>SyncGen_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geo_Zone\Creat_select_GeoZone.resx">
+      <DependentUpon>Creat_select_GeoZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geo_Zone\Calculation_Earth_Model.resx">
+      <DependentUpon>Calculation_Earth_Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geo_Zone\Geo_Zone_menu.resx">
+      <DependentUpon>Geo_Zone_menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GMDPageView.resx">
+      <DependentUpon>GMDPageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Condcutor Data\Cable_Standard.resx">
+      <DependentUpon>Cable_Standard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Condcutor Data\TransmissionLine_CondcutorData.cs.resx">
+      <DependentUpon>TransmissionLine_CondcutorData.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Condcutor Data\TransmissionLine_Standard.resx">
+      <DependentUpon>TransmissionLine_Standard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\LineModelTypeSelection.resx">
+      <DependentUpon>LineModelTypeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Line_type\ConductorDataForm.resx">
+      <DependentUpon>ConductorDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Line_type\Mphase_main.resx">
+      <DependentUpon>Mphase_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Line_type\Doublecircuit_main.resx">
+      <DependentUpon>Doublecircuit_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old Menu\old Line\Line_main.resx">
+      <DependentUpon>Line_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Line\Line_type\Single3PhaseLine_main.resx">
+      <DependentUpon>Single3PhaseLine_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load\EV_Main.resx">
+      <DependentUpon>EV_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load\Load_Main.resx">
+      <DependentUpon>Load_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generator\Generator_Main.resx">
+      <DependentUpon>Generator_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Menu.resx">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PF_Results\PF_result.resx">
+      <DependentUpon>PF_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Polt Forms\Geo_ZonePlot.resx">
+      <DependentUpon>Geo_ZonePlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rlc\RLC_Main.resx">
+      <DependentUpon>RLC_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Run_PF\RUN_PF_Option.resx">
+      <DependentUpon>RUN_PF_Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Save And Cancel Form\Save_Cancel_for_loadData.resx">
+      <DependentUpon>Save_Cancel_for_loadData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search\ChangeForm.resx">
+      <DependentUpon>ChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability\Genetrator\GeneratorModelMachine\GenROU.resx">
+      <DependentUpon>GenROU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability\Genetrator\GeneratorModelMachine\GenSAL.resx">
+      <DependentUpon>GenSAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability\Genetrator\GeneratorExciters\Ac1c.resx">
+      <DependentUpon>Ac1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability\Genetrator\GeneratorExciters\Esac1a.resx">
+      <DependentUpon>Esac1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability\ModelTypeMenu.resx">
+      <DependentUpon>ModelTypeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Substation\SubstationForm.resx">
+      <DependentUpon>SubstationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Substation\SubstationList_Form.resx">
+      <DependentUpon>SubstationList_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TLine_Menu\TLine_Menu.resx">
+      <DependentUpon>TLine_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\LoadTAPChanger.resx">
+      <DependentUpon>LoadTAPChanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\LTC_TapDependentImpedance.resx">
+      <DependentUpon>LTC_TapDependentImpedance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\Main3WTransformerMenu.resx">
+      <DependentUpon>Main3WTransformerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TestData\gradientPanelNoLoadTest.resx">
+      <DependentUpon>gradientPanelNoLoadTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TestData\gradientPanelZeroSeqCharacteristic.resx">
+      <DependentUpon>gradientPanelZeroSeqCharacteristic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TestData\gradientPanelZeroSeqImpedance.resx">
+      <DependentUpon>gradientPanelZeroSeqImpedance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TestData\QGIC.resx">
+      <DependentUpon>QGIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TwoWinding\LTC_TapDependentImpedance2W.resx">
+      <DependentUpon>LTC_TapDependentImpedance2W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transformer\TwoWinding\Main2WTransformerMenu.resx">
+      <DependentUpon>Main2WTransformerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WireMain\Wire_Main.resx">
+      <DependentUpon>Wire_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geo_Zone\Geo_Zone_Form_Create.resx">
+      <DependentUpon>Geo_Zone_Form_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Geo_Zone\Geo_Zone_Form_List.resx">
+      <DependentUpon>Geo_Zone_Form_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BL.ILineBL.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closedswitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connectedbus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linesegment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noconnnectionbus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openswitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transformer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_net5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{CE3AB3B7-46E8-48ED-866C-B16FE5E5FB5D}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\persistent\persistent.csproj">
+      <Project>{706EA4DF-B122-4658-9DFD-76C6D9171F83}</Project>
+      <Name>persistent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfUserControlGUI\WpfUserControlGUI.csproj">
+      <Project>{aa1dfdcc-53cb-46aa-8d99-6700f3947696}</Project>
+      <Name>WpfUserControlGUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gen_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switched_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_dia2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schunt_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schunt_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gen_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gen_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadmenu_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadmenu_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gen_button_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_button_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load_button_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_button_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network_buttonPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadmenu_button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\net_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generator_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load2_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schunt_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resistor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capacitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monophasic_line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capacitor_polarized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rlc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rlc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YgYgD_transformer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YgDD_transformer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triphasic_transformer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biphasic_line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biphasic_line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biphasic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biphasic_line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triphasic_line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Zzg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Zg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Yzg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Yg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_delta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tritr_general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customTransformerPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tritr_generalNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tr_tZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tZzg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tZg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tDeltapng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tYg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_tYzg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointer_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connector_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointer_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connector_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbMenu_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busesMenu_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\single_selection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagonal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phaseC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phaseB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phaseA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triphase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poliTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="New_concept_WPF\DiagramControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="New_concept_WPF\StyleResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rlc_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lines_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transformer_tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gen_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\line_shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TirTrans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\rlc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\capacitor.png" />
+    <Resource Include="Image\capacitor_polarized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\lc.png" />
+    <Resource Include="Image\lc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\coil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\rl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\resistor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\load_off1.png" />
+    <Resource Include="Image\load_on1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Z1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Zg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Z2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Zg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_Z3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_27224843CN5oICy7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\biphasic_line.png" />
+    <Resource Include="Image\monophasic_line.png" />
+    <Resource Include="Image\triphasic_line.png" />
+    <Resource Include="Image\triphasic_transformer.png" />
+    <Resource Include="Image\tritr_generalNew.png" />
+    <Resource Include="Image\YgDD_transformer.png" />
+    <Resource Include="Image\YgYgD_transformer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YgD.png" />
+    <None Include="Resources\WindGen.png" />
+    <None Include="Resources\synchgen.png" />
+    <None Include="Resources\PV_panel2.png" />
+    <None Include="Resources\PV_panel1.png" />
+    <Resource Include="Image\2w_transformer.png" />
+    <Resource Include="Image\EV.png" />
+    <Resource Include="Image\PV_panel2.png" />
+    <Resource Include="Image\SynchGen.png" />
+    <None Include="Resources\EV.png" />
+    <Resource Include="Image\WindGen.png" />
+    <Resource Include="Image\PV_panel1.png" />
+    <Resource Include="Image\solarpanel.png" />
+    <Resource Include="Image\load_v2.png" />
+    <Resource Include="Image\YgD.png" />
+    <Resource Include="Image\SyncGen_on.png" />
+    <Resource Include="Image\tr_tZ.png" />
+    <Resource Include="Image\tr_delta.png" />
+    <Resource Include="Image\tr_tDeltapng.png" />
+    <Resource Include="Image\tr_tY.png" />
+    <Resource Include="Image\tr_tYg.png" />
+    <Resource Include="Image\tr_tYzg.png" />
+    <Resource Include="Image\tr_tZg.png" />
+    <Resource Include="Image\tr_tZzg.png" />
+    <Resource Include="Image\tr_Y.png" />
+    <Resource Include="Image\tr_Yg.png" />
+    <Resource Include="Image\tr_Yzg.png" />
+    <Resource Include="Image\tr_Z.png" />
+    <Resource Include="Image\tr_Z1.png" />
+    <Resource Include="Image\tr_Z2.png" />
+    <Resource Include="Image\tr_Z3.png" />
+    <Resource Include="Image\tr_Zg.png" />
+    <Resource Include="Image\tr_Zg1.png" />
+    <Resource Include="Image\tr_Zg2.png" />
+    <Resource Include="Image\tr_Zzg.png" />
+    <Resource Include="Image\blank.png" />
+    <Resource Include="Image\tr_deltaOpen.png" />
+    <Resource Include="Image\tr_deltaOp.png" />
+    <Content Include="Image\biLinePreview.png" />
+    <Content Include="Image\bundle.png" />
+    <Content Include="Image\busesMenu_button.png" />
+    <Content Include="Image\Buses_button.png" />
+    <Content Include="Image\BusPreview.png" />
+    <Content Include="Image\bus_button_new.png" />
+    <Content Include="Image\Bus_button_v2.png" />
+    <Content Include="Image\Bus_button_v23.png" />
+    <Content Include="Image\Bus_button_v4.png" />
+    <Content Include="Image\Bus_button_v5.png" />
+    <Content Include="Image\Bus_button_v6.png" />
+    <Content Include="Image\Bus_button_v7.png" />
+    <Content Include="Image\Bus_button_v8.png" />
+    <Content Include="Image\Bus_button_v9png.png" />
+    <Content Include="Image\bus_dia1.png" />
+    <Content Include="Image\bus_dia2.png" />
+    <Content Include="Image\bus_dia3.png" />
+    <Content Include="Image\bus_menubuttob.png" />
+    <Content Include="Image\bus_tree - Copy.png" />
+    <Content Include="Image\bus_tree.png" />
+    <Content Include="Image\button_net1.png" />
+    <Content Include="Image\button_net2.png" />
+    <Content Include="Image\button_net3.png" />
+    <Content Include="Image\button_net4.png" />
+    <Content Include="Image\button_net5.png" />
+    <Content Include="Image\close1.png" />
+    <Content Include="Image\close2.png" />
+    <Content Include="Image\collapse.png" />
+    <Content Include="Image\collapse1.png" />
+    <Content Include="Image\connector_button.png" />
+    <Content Include="Image\connector_button1.png" />
+    <Content Include="Image\Conn_v2.png" />
+    <Content Include="Image\copy.png" />
+    <Content Include="Image\copy1.png" />
+    <Content Include="Image\Copy_v1.png" />
+    <Content Include="Image\cPreview.png" />
+    <Content Include="Image\customTransformerPreview.png" />
+    <Content Include="Image\cut.png" />
+    <Content Include="Image\cut1.png" />
+    <Content Include="Image\cut2.png" />
+    <Content Include="Image\cut3.png" />
+    <Content Include="Image\cut4.png" />
+    <Content Include="Image\cut_v1.png" />
+    <Content Include="Image\dbMenu_button.png" />
+    <Content Include="Image\delete.png" />
+    <Content Include="Image\delete1.png" />
+    <Content Include="Image\delete2.png" />
+    <Content Include="Image\delete3.png" />
+    <Content Include="Image\diaginal.png" />
+    <Content Include="Image\diagonal.png" />
+    <Content Include="Image\duplicate_v1.png" />
+    <Content Include="Image\empty.png" />
+    <Content Include="Image\empty_tree.png" />
+    <Content Include="Image\examples.png" />
+    <Content Include="Image\export.png" />
+    <Content Include="Image\export_button.png" />
+    <Content Include="Image\export_button1.png" />
+    <Content Include="Image\general.png" />
+    <Content Include="Image\generator_tree - Copy.png" />
+    <Content Include="Image\generator_tree.png" />
+    <Content Include="Image\GenPreview.png" />
+    <Content Include="Image\gen_button_new.png" />
+    <Resource Include="Image\SyncGen_off.png" />
+    <Content Include="Image\gen_on1.png" />
+    <Resource Include="Image\gen_on1_new.png" />
+    <None Include="Image\gen_on_new.png" />
+    <Content Include="Image\grid.png" />
+    <Content Include="Image\hazard.png" />
+    <Content Include="Image\inGrid.png" />
+    <Content Include="Image\lcPreview.png" />
+    <Content Include="Image\lines_tree.png" />
+    <Content Include="Image\load.png" />
+    <Content Include="Image\load1.png" />
+    <Content Include="Image\load2_tree.png" />
+    <Content Include="Image\loadmenu_button.png" />
+    <Content Include="Image\loadmenu_button1.png" />
+    <Content Include="Image\loadmenu_button2.png" />
+    <Content Include="Image\LoadPreview.png" />
+    <Content Include="Image\load_button1.png" />
+    <Content Include="Image\load_button_new.png" />
+    <Content Include="Image\lPreview.png" />
+    <Content Include="Image\monoLinePreview.png" />
+    <Content Include="Image\mselect_v2.png" />
+    <Content Include="Image\multiple_button.png" />
+    <Content Include="Image\multiple_button1.png" />
+    <Content Include="Image\network_buttonPanel.png" />
+    <Content Include="Image\net_tree - Copy.png" />
+    <Content Include="Image\net_tree.png" />
+    <Content Include="Image\new.png" />
+    <Content Include="Image\new1.png" />
+    <Content Include="Image\new_button.png" />
+    <Content Include="Image\new_button1.png" />
+    <Content Include="Image\new_button2.png" />
+    <Content Include="Image\New_sm.png" />
+    <Content Include="Image\new_v10png.png" />
+    <Content Include="Image\new_v2.png" />
+    <Content Include="Image\new_v3.png" />
+    <Content Include="Image\new_v4.png" />
+    <Content Include="Image\new_v5.png" />
+    <Content Include="Image\new_v6.png" />
+    <Content Include="Image\new_v7.png" />
+    <Content Include="Image\new_v8.png" />
+    <Content Include="Image\new_v9.png" />
+    <Content Include="Image\open_v1.png" />
+    <Content Include="Image\open_v2.png" />
+    <Content Include="Image\open_v3.png" />
+    <Content Include="Image\open_v4.png" />
+    <Content Include="Image\open_v5.png" />
+    <Content Include="Image\open_v6.png" />
+    <Content Include="Image\pan_button.png" />
+    <Content Include="Image\pan_v3.png" />
+    <Content Include="Image\Paste.png" />
+    <Content Include="Image\paste1.png" />
+    <Content Include="Image\pencil_button.png" />
+    <Content Include="Image\pencil_v3.png" />
+    <Content Include="Image\phaseA.png" />
+    <Content Include="Image\phaseB.png" />
+    <Content Include="Image\phaseC.png" />
+    <Content Include="Image\Picture3.png" />
+    <Content Include="Image\play-button.png" />
+    <Content Include="Image\pointer_button.png" />
+    <Content Include="Image\pointer_button1.png" />
+    <Content Include="Image\pointer_button2.png" />
+    <Content Include="Image\poliTool.png" />
+    <Content Include="Image\prin1_v1.png" />
+    <Content Include="Image\print.png" />
+    <Content Include="Image\print_button.png" />
+    <Content Include="Image\print_button1.png" />
+    <Content Include="Image\redo.png" />
+    <Content Include="Image\redo1.png" />
+    <Content Include="Image\Redo_v1.png" />
+    <Content Include="Image\Redo_v3.png" />
+    <Content Include="Image\rl1.png" />
+    <Content Include="Image\rlc1.png" />
+    <Content Include="Image\rLCPreview.png" />
+    <Content Include="Image\rlc_tree.png" />
+    <Content Include="Image\rLPreview.png" />
+    <Content Include="Image\rot270.png" />
+    <Content Include="Image\rPreview.png" />
+    <Content Include="Image\save.png" />
+    <Content Include="Image\save1.png" />
+    <Content Include="Image\save_button.png" />
+    <Content Include="Image\save_button1.png" />
+    <Content Include="Image\save_button2.png" />
+    <Content Include="Image\save_v1.png" />
+    <Content Include="Image\save_v2.png" />
+    <Content Include="Image\SchuntPreview.png" />
+    <Content Include="Image\schunt_off1.png" />
+    <Content Include="Image\schunt_on1.png" />
+    <Content Include="Image\schunt_tree.png" />
+    <Content Include="Image\selectall.png" />
+    <Content Include="Image\selectall1.png" />
+    <Content Include="Image\selectAll_v1.png" />
+    <Content Include="Image\select_v1.png" />
+    <Content Include="Image\single_selection.png" />
+    <Resource Include="Image\solarpanel_off.png" />
+    <Content Include="Image\switch_button_new.png" />
+    <Content Include="Image\test.png" />
+    <Content Include="Image\testimg.png" />
+    <Content Include="Image\text_button.png" />
+    <Content Include="Image\text_v1.png" />
+    <Content Include="Image\text_v2.png" />
+    <Content Include="Image\transformer_tree.png" />
+    <Content Include="Image\triLinePreview.png" />
+    <Content Include="Image\triphase.png" />
+    <Content Include="Image\triTraPreview.png" />
+    <Content Include="Image\tritr_general.png" />
+    <Content Include="Image\undo.png" />
+    <Content Include="Image\undo1.png" />
+    <Content Include="Image\Undo_v1.png" />
+    <Content Include="Image\Undo_v2.png" />
+    <Content Include="Image\ygDDTraPreview.png" />
+    <Content Include="Image\ygYgDTraPreview.png" />
+    <Content Include="Resources\gen_on1_new.png" />
+    <Content Include="Resources\Gen_on_new.png" />
+    <Content Include="Resources\insert.png" />
+    <None Include="Resources\insert2.png" />
+    <None Include="Resources\insert1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="chart_Form\" />
+    <Folder Include="Schunt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Accord.IO">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Accord.Math">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="csmatio">
+      <Version>1.0.20</Version>
+    </PackageReference>
+    <PackageReference Include="LiveCharts.WinForms">
+      <Version>0.9.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="MathNet.Numerics">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+      <Version>1.1.31</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Calculate.Base">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Calculate.Windows">
+      <Version>18.4.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Chart.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Edit.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Grid.Base">
+      <Version>20.2.0.49</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Grid.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Grid.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.GridHelperClasses.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.HTMLUI.windows">
+      <Version>18.4.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Office2016Theme.WinForms">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Office2019Theme.WinForms">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.PivotChart.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Schedule.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfBarcode.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfDataGrid.WinForms">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfDiagram.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfGrid.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfInput.WinForms">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfShared.WPF">
+      <Version>18.4.0.47</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfTreeView.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Spreadsheet.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Themes.Metro.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Themes.Office2010Blue.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Themes.SystemTheme.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.WPF">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.WPF.Classic">
+      <Version>19.4.0.56</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.TreeMap.Windows">
+      <Version>20.4.0.44</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ShouldAddDPIScalingManifest="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

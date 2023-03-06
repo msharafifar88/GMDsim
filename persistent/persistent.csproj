@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{706EA4DF-B122-4658-9DFD-76C6D9171F83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>persistent</RootNamespace>
+    <AssemblyName>persistent</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.Calculate.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Calculate.Base.20.4.0.44\lib\net46\Syncfusion.Calculate.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Base.20.4.0.44\lib\net46\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Windows.20.4.0.44\lib\net46\Syncfusion.Chart.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Core.WinForms.20.4.0.44\lib\net46\Syncfusion.Core.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Base.20.4.0.44\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Windows.20.4.0.44\lib\net46\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grouping.Base.20.4.0.44\lib\net46\Syncfusion.Grouping.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.4.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.20.4.0.44\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Windows.20.4.0.44\lib\net46\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SpellChecker.Base.20.4.0.44\lib\net46\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Base.20.4.0.44\lib\net46\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Windows.20.4.0.44\lib\net46\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="areaandzone\Area.cs" />
+    <Compile Include="areaandzone\Owner.cs" />
+    <Compile Include="areaandzone\Zone.cs" />
+    <Compile Include="bases\BaseEntity.cs" />
+    <Compile Include="bases\ModelType.cs" />
+    <Compile Include="bases\ModelTypeProperty.cs" />
+    <Compile Include="bases\Property.cs" />
+    <Compile Include="bases\PropertyType.cs" />
+    <Compile Include="Case.cs" />
+    <Compile Include="common\DeviceInterface.cs" />
+    <Compile Include="common\ItemEnum.cs" />
+    <Compile Include="common\GMDSimTreeNode.cs" />
+    <Compile Include="cost\FaultParameters.cs" />
+    <Compile Include="cost\OutCostModel.cs" />
+    <Compile Include="cost\SGridViewDataColumn.cs" />
+    <Compile Include="display\Display.cs" />
+    <Compile Include="display\DisplayGenerator.cs" />
+    <Compile Include="enumeration\Action.cs" />
+    <Compile Include="enumeration\CableTypeEnum.cs" />
+    <Compile Include="enumeration\Calculation_RUNPF\Option.cs" />
+    <Compile Include="enumeration\ConductorTypeEnum.cs" />
+    <Compile Include="enumeration\CostModel.cs" />
+    <Compile Include="enumeration\Transformer\Lists\BILValuesList.cs" />
+    <Compile Include="enumeration\Transformer\Lists\CoolingClassList.cs" />
+    <Compile Include="enumeration\Transformer\Lists\CoreConstructionList.cs" />
+    <Compile Include="enumeration\Transformer\Lists\InsulationList.cs" />
+    <Compile Include="enumeration\Transformer\Lists\TempRiseList.cs" />
+    <Compile Include="enumeration\Transformer\TempRiseClass.cs" />
+    <Compile Include="enumeration\Transformer\BILValuesEnum.cs" />
+    <Compile Include="enumeration\Transformer\CoolingClassEnum.cs" />
+    <Compile Include="enumeration\Transformer\CoreConstruction2W.cs" />
+    <Compile Include="enumeration\Transformer\CurrentVoltageLossUnitsEnum.cs" />
+    <Compile Include="enumeration\EMTModelTypeEnum.cs" />
+    <Compile Include="enumeration\FuelType.cs" />
+    <Compile Include="enumeration\LengthType.cs" />
+    <Compile Include="enumeration\LengthUnitType.cs" />
+    <Compile Include="enumeration\LineConductorTypeEnum.cs" />
+    <Compile Include="enumeration\Transformer\CoreConstruction.cs" />
+    <Compile Include="enumeration\Transformer\ExcitedWindingEnum.cs" />
+    <Compile Include="enumeration\Transformer\InsulationTypeEnum.cs" />
+    <Compile Include="enumeration\Transformer\InsulationTypesEnum.cs" />
+    <Compile Include="enumeration\Transformer\NominalRatingUnit.cs" />
+    <Compile Include="enumeration\Transformer\RatedVoltageUnit.cs" />
+    <Compile Include="enumeration\Transformer\TransformerTapSide2W.cs" />
+    <Compile Include="enumeration\Transformer\TransformerTapSide.cs" />
+    <Compile Include="enumeration\Transformer\TransformerType.cs" />
+    <Compile Include="enumeration\Transformer\WindingConfiguration.cs" />
+    <Compile Include="enumeration\Generator\LineDropCompensationEnum.cs" />
+    <Compile Include="enumeration\TypeOfInput.cs" />
+    <Compile Include="enumeration\T_Lines\BundleConf.cs" />
+    <Compile Include="enumeration\T_Lines\ConductorPoles.cs" />
+    <Compile Include="enumeration\T_Lines\ConductorsOnTower.cs" />
+    <Compile Include="enumeration\T_Lines\DCAC.cs" />
+    <Compile Include="enumeration\T_Lines\DefaultOhmValues.cs" />
+    <Compile Include="enumeration\T_Lines\FrqIncrements.cs" />
+    <Compile Include="enumeration\T_Lines\GroundWires.cs" />
+    <Compile Include="enumeration\T_Lines\GroundWiresOnTower.cs" />
+    <Compile Include="enumeration\T_Lines\Library.cs" />
+    <Compile Include="enumeration\T_Lines\LineModelType.cs" />
+    <Compile Include="enumeration\T_Lines\NumCircuits.cs" />
+    <Compile Include="enumeration\T_Lines\PhasesNumer.cs" />
+    <Compile Include="enumeration\T_Lines\RatedVoltage.cs" />
+    <Compile Include="enumeration\T_Lines\System.cs" />
+    <Compile Include="enumeration\T_Lines\TowerNumber.cs" />
+    <Compile Include="enumeration\T_Lines\TowerType.cs" />
+    <Compile Include="enumeration\T_Lines\Transposition.cs" />
+    <Compile Include="enumeration\T_Lines\Units.cs" />
+    <Compile Include="enumeration\UtilsKeywords.cs" />
+    <Compile Include="network\bus_entity\Bus_type.cs" />
+    <Compile Include="network\Calculation_entitiy\Line_pu\Line_pu.cs" />
+    <Compile Include="network\Calculation_entitiy\Transformer_pu\Transformer_pu.cs" />
+    <Compile Include="network\generator_entity\CapabilityCurve.cs" />
+    <Compile Include="network\Geo_Zone\GeoZone.cs" />
+    <Compile Include="network\Geo_Zone\GeoZone_Property.cs" />
+    <Compile Include="network\Geo_Zone\GeoZone_location.cs" />
+    <Compile Include="network\load_entitiy\EV.cs" />
+    <Compile Include="network\transformers_entity\Type\C2WTransformer.cs" />
+    <Compile Include="network\generator_entity\FaultParameters.cs" />
+    <Compile Include="network\generator_entity\Gentype\PVGen.cs" />
+    <Compile Include="network\generator_entity\Gentype\SyncGen.cs" />
+    <Compile Include="network\generator_entity\Gentype\WindGen.cs" />
+    <Compile Include="network\generator_entity\LineDropCompensation.cs" />
+    <Compile Include="network\generator_entity\WindControlMode.cs" />
+    <Compile Include="network\load_entitiy\DistributedGeneration.cs" />
+    <Compile Include="network\load_entitiy\LoadInformation.cs" />
+    <Compile Include="network\Substation\Substations.cs" />
+    <Compile Include="network\transformers_entity\BIL.cs" />
+    <Compile Include="network\transformers_entity\CoolingClass.cs" />
+    <Compile Include="network\transformers_entity\CurrentVoltageLossUnit.cs" />
+    <Compile Include="network\transformers_entity\EMT.cs" />
+    <Compile Include="network\transformers_entity\GrandientPanel.cs" />
+    <Compile Include="network\transformers_entity\HypsteresisCharacteristic.cs" />
+    <Compile Include="network\transformers_entity\Impedances.cs" />
+    <Compile Include="network\transformers_entity\InsulationType.cs" />
+    <Compile Include="network\transformers_entity\LoadTapChanger.cs" />
+    <Compile Include="network\transformers_entity\MVALimits.cs" />
+    <Compile Include="network\transformers_entity\LTCControl.cs" />
+    <Compile Include="network\transformers_entity\NominalData.cs" />
+    <Compile Include="network\transformers_entity\PSSETransmorerTypeIO.cs" />
+    <Compile Include="network\transformers_entity\QGICCharacteristic.cs" />
+    <Compile Include="network\transformers_entity\Reliability.cs" />
+    <Compile Include="network\transformers_entity\TapDependentImpedance.cs" />
+    <Compile Include="network\transformers_entity\TemperaturesLimits.cs" />
+    <Compile Include="network\transformers_entity\TempRiseClass.cs" />
+    <Compile Include="network\transformers_entity\TestData.cs" />
+    <Compile Include="network\transformers_entity\Topology.cs" />
+    <Compile Include="network\transformers_entity\TransformerImpedance.cs" />
+    <Compile Include="network\transformers_entity\Type\YgDTransformer.cs" />
+    <Compile Include="network\transformers_entity\WindingCapacitances.cs" />
+    <Compile Include="network\transformers_entity\WindingDCResistances.cs" />
+    <Compile Include="network\transformers_entity\WindingTypeVectorHVLV.cs" />
+    <Compile Include="network\transformers_entity\WindingTypeVectorHVTV.cs" />
+    <Compile Include="network\transformers_entity\ZeroSequenceCharacteristc.cs" />
+    <Compile Include="network\transformers_entity\ZeroSequenceImpedanceMeasurement.cs" />
+    <Compile Include="network\wire\wire.cs" />
+    <Compile Include="stability\Generator\Exciters\ESAC1A.cs" />
+    <Compile Include="stability\Generator\Exciters\GeneratorExcitersModelType.cs" />
+    <Compile Include="stability\Generator\Exciters\AC1C.cs" />
+    <Compile Include="stability\Generator\Governors\GASTD.cs" />
+    <Compile Include="stability\Generator\Governors\DEGOV.cs" />
+    <Compile Include="stability\Generator\Governors\BBGOV1.cs" />
+    <Compile Include="stability\Generator\Governors\GeneratorGovernorsModelType.cs" />
+    <Compile Include="stability\Generator\machine Model\GENSAL.cs" />
+    <Compile Include="stability\Generator\Stabilizers\GeneratorStabilizersModelType.cs" />
+    <Compile Include="stability\Generator\Stabilizers\PSSSH.cs" />
+    <Compile Include="stability\Generator\Stabilizers\IEE2ST.cs" />
+    <Compile Include="stability\Line\LineModelType.cs" />
+    <Compile Include="enumeration\Orientation.cs" />
+    <Compile Include="enumeration\RCLType.cs" />
+    <Compile Include="enumeration\RotorShape.cs" />
+    <Compile Include="enumeration\RUnit.cs" />
+    <Compile Include="enumeration\ScaleType.cs" />
+    <Compile Include="enumeration\Shape.cs" />
+    <Compile Include="enumeration\StabilityType.cs" />
+    <Compile Include="enumeration\Status.cs" />
+    <Compile Include="enumeration\TransmissionLineDataTypeEnum.cs" />
+    <Compile Include="enumeration\TypeLimit.cs" />
+    <Compile Include="enumeration\UnitType.cs" />
+    <Compile Include="faultParameters\InternalSequence.cs" />
+    <Compile Include="faultParameters\Nerual-to-GroundImpedance.cs" />
+    <Compile Include="faultParameters\StepTransformer.cs" />
+    <Compile Include="fluxModel\CurrentFlux.cs" />
+    <Compile Include="line\CableData.cs" />
+    <Compile Include="line\ConductorData.cs" />
+    <Compile Include="line\ConductorDataOnce.cs" />
+    <Compile Include="line\ElectricalData.cs" />
+    <Compile Include="line\GeometricalPipData.cs" />
+    <Compile Include="line\LineConductor.cs" />
+    <Compile Include="line\LineEMTModel.cs" />
+    <Compile Include="line\SkinEffect.cs" />
+    <Compile Include="line\StabilityLine.cs" />
+    <Compile Include="line\TransmissionLineData.cs" />
+    <Compile Include="network\line_entity\DoubleCircuitLine.cs" />
+    <Compile Include="network\rlc_entity\C.cs" />
+    <Compile Include="network\rlc_entity\L.cs" />
+    <Compile Include="network\rlc_entity\LC.cs" />
+    <Compile Include="network\line_entity\LineBranches.cs" />
+    <Compile Include="network\line_entity\Single3phaseLine.cs" />
+    <Compile Include="network\rlc_entity\R.cs" />
+    <Compile Include="network\rlc_entity\RL.cs" />
+    <Compile Include="network\rlc_entity\RLC.cs" />
+    <Compile Include="network\rlc_entity\RLCAttribute.cs" />
+    <Compile Include="network\rlc_entity\RLCbranches.cs" />
+    <Compile Include="network\SwitchBranches.cs" />
+    <Compile Include="network\transformers_entity\Type\TransformerControls.cs" />
+    <Compile Include="network\load_entitiy\Loads.cs" />
+    <Compile Include="network\bus_entity\Bus.cs" />
+    <Compile Include="network\bus_entity\BusInformation.cs" />
+    <Compile Include="network\generator_entity\Gentype\Generator.cs" />
+    <Compile Include="network\transformers_entity\Type\MainTransformers.cs" />
+    <Compile Include="network\line_entity\MultiPhaseLine.cs" />
+    <Compile Include="network\transformers_entity\Type\C3WTransformer.cs" />
+    <Compile Include="network\transformers_entity\Type\TTransformer.cs" />
+    <Compile Include="network\transformers_entity\Type\YgDDTransformer.cs" />
+    <Compile Include="network\transformers_entity\Type\YgYgDTransformer.cs" />
+    <Compile Include="network\generator_entity\PowerControl.cs" />
+    <Compile Include="network\generator_entity\VoltageControl.cs" />
+    <Compile Include="propagationModel\MatrixCoeficients.cs" />
+    <Compile Include="propagationModel\PropagationData.cs" />
+    <Compile Include="propagationModel\PropagationDataDoubleLine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scope\Scope.cs" />
+    <Compile Include="stability\BaseStability.cs" />
+    <Compile Include="stability\Generator\machine Model\CBattery.cs" />
+    <Compile Include="stability\Generator\machine Model\GENROE.cs" />
+    <Compile Include="stability\IStability.cs" />
+    <Compile Include="stability\Generator\machine Model\GeneratorModelType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="power\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

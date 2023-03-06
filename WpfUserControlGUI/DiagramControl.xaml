@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WpfUserControlGUI.DiagramControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfUserControlGUI" 
+             xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Tools.Wpf"
+             xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF" xmlns:Syncfusion="clr-namespace:Syncfusion.UI.Xaml.Diagram;assembly=Syncfusion.SfDiagram.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background= "#FFF" >
+        <syncfusion:DockingManager x:Name="dockingManager"  UseDocumentContainer="True" syncfusionskin:SfSkinManager.VisualStyle="Office2010Blue"
+                                   DisabledCloseButtonsBehavior="Hide" 
+                                   DocumentCloseButtonType="Individual"
+                                   ShowTabListContextMenu="False">
+            <ContentControl x:Name="Network" syncfusion:DockingManager.SideInDockedMode= "Left" 
+                            syncfusion:DockingManager.Header="Network" 
+                            syncfusion:DockingManager.DesiredWidthInDockedMode ="170"/>
+            <ContentControl x:Name="Settings" syncfusion:DockingManager.SideInDockedMode= "Tabbed"
+                            syncfusion:DockingManager.Header="Settings"
+                            syncfusion:DockingManager.TargetNameInDockedMode ="Network"
+                            syncfusion:DockingManager.DesiredWidthInDockedMode ="170"/>
+            <ContentControl x:Name="Document_text1" 
+                            syncfusion:DockingManager.State="Document"
+                            syncfusion:DockingManager.DockFillMode="Absolute"
+                            syncfusion:DockingManager.ShowDocumentMenuItem="false"/>
+            <ContentControl x:Name="Properties" syncfusion:DockingManager.SideInDockedMode ="Right"
+                            syncfusion:DockingManager.Header="Properties"
+                            syncfusion:DockingManager.TargetNameInDockedMode ="Network"
+                            syncfusion:DockingManager.State="AutoHidden"
+                            syncfusion:DockingManager.DesiredWidthInDockedMode ="170">
+                <ContentControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.155"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ContentControl.RenderTransform>
+            </ContentControl>
+        </syncfusion:DockingManager>
+
+    </Grid>
+
+
+
+</UserControl>
+    
+
